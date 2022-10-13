@@ -315,7 +315,7 @@ static int l_##_mdname(lua_State *L) \
   return l_digest(L); \
 }
 
-NSE_DECLARE_DIGEST(md4)
+#NSE_DECLARE_DIGEST(md4)
 NSE_DECLARE_DIGEST(md5)
 NSE_DECLARE_DIGEST(sha1)
 NSE_DECLARE_DIGEST(ripemd160)
@@ -551,7 +551,7 @@ static const struct luaL_Reg openssllib[] = {
   { "md4", l_md4 },
   { "md5", l_md5 },
   { "sha1", l_sha1 },
-  { "ripemd160", l_ripemd160 },
+ // { "ripemd160", l_ripemd160 },
 
   { "digest", l_digest },
   { "hmac", l_hmac },
